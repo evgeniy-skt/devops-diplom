@@ -47,7 +47,7 @@
     state: started
     enabled: yes
 
-- name: Add node_exporter dashboard
+- name: Add node-exporter dashboard
   retries: 5
   delay: 2
   community.grafana.grafana_dashboard:
@@ -56,13 +56,4 @@
     grafana_password: "admin"
     dashboard_id: 1860
     dashboard_revision: 27
-  ignore_errors: true
-
-- name: Add mysqld_exporter dashboard
-  community.grafana.grafana_dashboard:
-    grafana_url: http://{{ hostvars[inventory_hostname]['ansible_default_ipv4']['address'] }}:3000
-    grafana_user: "admin"
-    grafana_password: "admin"
-    dashboard_id: 14057
-    dashboard_revision: 1
   ignore_errors: true

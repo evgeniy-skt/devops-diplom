@@ -42,7 +42,7 @@ nginx_revproxy_sites:                                         # List of sites to
     domains:                                                  # List of server_name aliases
       - grafana.ev-gen.info
     upstreams:                                                # List of Upstreams
-      - {backend_address: 192.168.10.24, backend_port: 3000}
+      - {backend_address: 192.168.10.20, backend_port: 3000}
     ssl: true                                                 # Set to True if you want to redirect http to https
     hsts_max_age: 63072000                                    # Set HSTS header with max-age defined
     letsencrypt: true                                        # Set to True if you want use letsencrypt
@@ -54,7 +54,7 @@ nginx_revproxy_sites:                                         # List of sites to
     domains:                                                  # List of server_name aliases
       - alertmanager.ev-gen.info
     upstreams:                                                # List of Upstreams
-      - {backend_address: 192.168.10.24, backend_port: 9093}
+      - {backend_address: 192.168.10.20, backend_port: 9093}
     ssl: true                                                 # Set to True if you want to redirect http to https
     hsts_max_age: 63072000                                    # Set HSTS header with max-age defined
     letsencrypt: true                                        # Set to True if you want use letsencrypt
@@ -66,7 +66,7 @@ nginx_revproxy_sites:                                         # List of sites to
     domains:                                                  # List of server_name aliases
       - prometheus.ev-gen.info
     upstreams:                                                # List of Upstreams
-      - {backend_address: 192.168.10.24, backend_port: 9090}
+      - {backend_address: 192.168.10.20, backend_port: 9090}
     ssl: true                                                 # Set to True if you want to redirect http to https
     hsts_max_age: 63072000                                    # Set HSTS header with max-age defined
     letsencrypt: true                                        # Set to True if you want use letsencrypt
