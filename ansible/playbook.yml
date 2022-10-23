@@ -1,40 +1,40 @@
 ---
-# - hosts: proxy_server
-#   become: true
-#   become_user: root
-#   become_method: sudo
-#   roles:
-#     - rev-proxy
-#     - node-exporter
+- hosts: proxy_server
+  become: true
+  become_user: root
+  become_method: sudo
+  roles:
+    - rev-proxy
+    - node-exporter
 
-# - hosts: mysql_db01 mysql_db02
-#   become: true
-#   become_user: root
-#   become_method: sudo
-#   roles:
-#     - mysql
-#     - node-exporter
-#     - mysql-exporter
-#
-# - hosts: wordpress
-#   become: true
-#   become_user: root
-#   become_method: sudo
-#   roles:
-#     - wordpress
-#     - node-exporter
-#
-# - hosts: gitlab
-#   become: true
-#   become_user: root
-#   become_method: sudo
-#   roles:
-#     - gitlab
-#     - node-exporter
-#   environment:
-#     GITLAB_ROOT_PASSWORD: "{{ gitlab_initial_root_password }}"
-#     GITLAB_SHARED_RUNNERS_REGISTRATION_TOKEN: "{{ gitlab_runners_registration_token }}"
-#
+- hosts: mysql_db01 mysql_db02
+  become: true
+  become_user: root
+  become_method: sudo
+  roles:
+    - mysql
+    - node-exporter
+    - mysql-exporter
+
+- hosts: wordpress
+  become: true
+  become_user: root
+  become_method: sudo
+  roles:
+    - wordpress
+    - node-exporter
+
+- hosts: gitlab
+  become: true
+  become_user: root
+  become_method: sudo
+  roles:
+    - gitlab
+    - node-exporter
+  environment:
+    GITLAB_ROOT_PASSWORD: "{{ gitlab_initial_root_password }}"
+    GITLAB_SHARED_RUNNERS_REGISTRATION_TOKEN: "{{ gitlab_runners_registration_token }}"
+
 - hosts: runner
   become: true
   become_user: root
@@ -43,12 +43,12 @@
     - riemers.gitlab-runner
     - node-exporter
 
-# - hosts: monitoring
-#   become: true
-#   become_user: root
-#   become_method: sudo
-#   roles:
-#     - prometheus
-#     - alertmanager
-#     - grafana
-#     - node-exporter
+  - hosts: monitoring
+    become: true
+    become_user: root
+    become_method: sudo
+    roles:
+      - prometheus
+      - alertmanager
+      - grafana
+      - node-exporter
