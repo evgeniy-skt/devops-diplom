@@ -1,7 +1,7 @@
 # Дипломная работа для курса DevOps от Нетологии в Яндекс облаке
 
 1. Зарегистрировать доменное имя (любое на ваш выбор в любой доменной зоне).
-    
+
     Зарегистрировал доменное имя `ev-gen.info`. В настройках у регистратора в разделе DNS указал сервера Яндекса.
 ![domain-registration](https://github.com/evgeniy-skt/devops-diplom/blob/main/screenshots/domain-registration.png)
 
@@ -41,7 +41,9 @@
 
 1. Настроить CI/CD для автоматического развёртывания приложения.
 
-    Еще пока нет
+    Добавил деплой скрипт, в котором копирую вордпрес на машину app
+
+![](https://github.com/evgeniy-skt/devops-diplom/blob/main/screenshots/gitlab-working-deploy-job.png)
 
 1. Настроить мониторинг инфраструктуры с помощью стека: Prometheus, Alert Manager и Grafana.
 
