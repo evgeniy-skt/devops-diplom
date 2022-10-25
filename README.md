@@ -44,6 +44,7 @@
     Добавил деплой скрипт, в котором копирую вордпрес на машину app
 
 ![](https://github.com/evgeniy-skt/devops-diplom/blob/main/screenshots/gitlab-working-deploy-job.png)
+![](https://github.com/evgeniy-skt/devops-diplom/blob/main/screenshots/gitlab-working-deploy-job-log.png)
 
 1. Настроить мониторинг инфраструктуры с помощью стека: Prometheus, Alert Manager и Grafana.
 
